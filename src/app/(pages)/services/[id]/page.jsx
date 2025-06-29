@@ -8,7 +8,7 @@ const SingleServicePage = () => {
   return (
     <main className=' xl:space-y-24  md:space-y-16 space-y-10  '>
       <PageHeader title={'Service Detailes'} />
-      <div className='container grid grid-cols-12 gap-10'>
+      <div className='container grid grid-cols-12 xl:gap-x-10 gap-y-12 '>
         {/* other service */}
         <div className='col-span-12 xl:col-span-4 space-y-6 max-xl:order-2'>
           {/* related */}
