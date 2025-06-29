@@ -1,11 +1,9 @@
-import AnalysisTabs from '@/components/analysis/analysis-tabs'
-import PageHeader from '@/components/shared/page-header'
+import { FileForm } from '@/components/analysis/file-form'
 import Image from 'next/image'
-import React from 'react'
 
 const AnalysisPage = () => {
   return (
-    <main className=' xl:space-y-24  md:space-y-16 space-y-10  mt-16'>
+    <div className=' xl:space-y-24  md:space-y-16 space-y-10  mt-16'>
       <section className='container space-y-10'>
         <Image
           src="/logo.png"
@@ -18,10 +16,10 @@ const AnalysisPage = () => {
           Analyse suspicious files, domains, IPs and URLs to detect malware and
           other breaches, automatically share them with the security community.
         </p>
-        <AnalysisTabs/>
+        <FileForm/>
       </section>
 
-    </main>
+    </div>
   )
 }
 

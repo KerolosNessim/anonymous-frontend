@@ -1,12 +1,14 @@
 import PageHeader from '@/components/shared/page-header'
-import SideBlog from '@/components/shared/side-blog'
 import SideServices from '@/components/shared/side-services'
+import { services } from '@/data/shared'
 import Image from 'next/image'
-import React from 'react'
 
-const SingleServicePage = () => {
+const SingleServicePage =  ({ params }) => {
+  const id = params?.id
+  const serv = services?.find((item) => item.id === Number(id))
+  const otherServices=services?.filter((item) => item.id !== Number(id))
   return (
-    <main className=' xl:space-y-24  md:space-y-16 space-y-10  '>
+    <div className=' xl:space-y-24  md:space-y-16 space-y-10  '>
       <PageHeader title={'Service Detailes'} />
       <div className='container grid grid-cols-12 xl:gap-x-10 gap-y-12 '>
         {/* other service */}
@@ -14,22 +16,20 @@ const SingleServicePage = () => {
           {/* related */}
           <div className='space-y-6'>
             <h2 className=' text-2xl font-bold text-primary'>Other Services</h2>
-            <SideServices />
+            <SideServices services={otherServices} />
           </div>
         </div>
         {/* content */}
         <div className='col-span-12 xl:col-span-8 space-y-6 max-xl:order-1'>
-          <Image src="/home/box-bg.jpg" alt="blog" width={500} height={500} className="object-cover w-full h-[45vh] rounded-xl " />
-          <h1 className='xl:text-4xl text-3xl font-bold leading-tight ps-3 border-s-2 border-primary'>Evidence & Analysis</h1>
-          <div className=' text-sm text-gray-500 font-semibold space-y-6'>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ex leo, fringilla in molestie quis, porta vitae libero. In non erat consequat, feugiat massa blandit, varius lectus. Mauris sagittis sodales ex at tincidunt. Cras non felis et urna consequat dictum et vel est. Proin quis faucibus diam. Integer sed arcu in dolor gravida finibus. Vivamus non bibendum turpis. Cras dictum nulla et turpis lobortis tristique. Aliquam id massa leo. Praesent dapibus elit vitae urna iaculis, eu placerat tellus feugiat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Vivamus consequat lectus lectus, quis pulvinar turpis condimentum et. Nunc maximus dolor sed viverra aliquam. Nunc sollicitudin, libero id condimentum tincidunt, mauris nulla efficitur risus, sed viverra nunc odio imperdiet dolor.</p>
-            <p>Vivamus cursus eget nibh et efficitur. Mauris vitae lacus et lorem molestie ullamcorper a in nisi. Phasellus a aliquet lacus. Suspendisse facilisis tempor lectus vel tempus. Quisque non ex nisl. Fusce tincidunt convallis odio vitae vehicula. Mauris interdum molestie imperdiet. Cras accumsan quam nec blandit sodales.</p>
-            <p>Phasellus quis justo volutpat, rhoncus ligula tempus, venenatis tortor. Sed aliquam ligula dolor, id facilisis lacus hendrerit ut. Curabitur elementum pellentesque odio, et lacinia mi blandit sit amet. Nullam blandit leo turpis, at tincidunt diam volutpat a. Aenean congue rutrum est, non elementum turpis pellentesque vitae. Proin viverra velit est, sit amet aliquam metus pellentesque ac. Vivamus nec ante vitae enim maximus fermentum vel sit amet est.</p>
+          <Image src={serv?.img} alt="blog" width={500} height={500} className="object-cover w-full h-[45vh] rounded-xl " />
+          <h1 className='xl:text-4xl text-3xl font-bold leading-tight ps-3 border-s-2 border-primary'>{serv?.title}</h1>
+          <div className=' text-gray-400 font-semibold space-y-6'>
+            <p>{serv?.desc}</p>
+            <div dangerouslySetInnerHTML={{ __html: serv?.details }}></div>
           </div>
         </div>
-
       </div>
-    </main>
+    </div>
   )
 }
 

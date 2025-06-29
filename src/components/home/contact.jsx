@@ -10,7 +10,7 @@ const Contact = () => {
       <div className=' col-span-12 md:col-span-6 space-y-6 max-md:text-center'>
         <p className='font-bold text-primary ' style={{ letterSpacing: '6px' }}>contact us</p>
         <h2 className='xl:text-4xl  text-3xl font-bold leading-tight'>Get In Touch</h2>
-        <p className='text-sm  text-gray-500'>Maecenas eros dui, tempus sit amet quam ac, ultrices vehicula elit. Sed euismod vel tortor et luctus. In viverra finibus velit et ullamcorper.</p>
+        <p className='text-sm  text-gray-500'>Have questions, feedback, or a partnership inquiry? We would love to hear from you.</p>
         {/* icons */}
         <div className='grid grid-cols-12 items-center gap-8'>
           {contacts.map((item, idx) => (

@@ -8,7 +8,7 @@ import { FaFacebookF } from "react-icons/fa6";
 
 const TeamPage = () => {
   return (
-    <main className=' xl:space-y-24  md:space-y-16 space-y-10'>
+    <div className=' xl:space-y-24  md:space-y-16 space-y-10'>
       <PageHeader title={'Our Team'} />
       <div >
         <section className='py-10 bg-gradient-to-t from-white/5 to-background '>
@@ -48,7 +48,7 @@ const TeamPage = () => {
         </section>
         <Box />
       </div>
-    </main>
+    </div>
   )
 }
 

@@ -18,19 +18,18 @@ const Blogs = () => {
           {blogs.map((item, idx) => (
             <article key={idx} className=' col-span-12 md:col-span-6 xl:col-span-4 space-y-4 border border-primary rounded-xl overflow-hidden'>
               <figure className='h-52 relative'>
-                <Image src={item.img} alt={item.title} fill className='object-cover' />
+                <Image src={item?.img} alt={item?.title} fill className='object-cover' />
               </figure >
               <div className='px-4 py-6 space-y-4'>
-                <h3 className=' font-bold  text-xl'>{item.title}</h3>
-                <p className='text-gray-400 '>{item.desc}</p>
-                <Link href={`/blogs/1`} className='text-primary flex items-center  gap-2 font-bold capitalize hover:gap-4 hover:text-white transition-all duration-300 '>
+                <h3 className=' font-bold  xl:text-2xl text-xl'>{item?.title}</h3>
+                <p className='text-gray-400 line-clamp-3'>{item?.content}</p>
+                <Link href={`/blogs/${item?.id}`} className='text-primary flex items-center  gap-2 font-bold capitalize hover:gap-4 hover:text-white transition-all duration-300 '>
                   learn more <MdKeyboardDoubleArrowRight size={20} />
                 </Link>
               </div>
               <div className='p-4 border-t border-primary text-sm  flex items-center gap-3'>
-                <p>{item.created_at}</p>
                 <div className='size-2 bg-primary rounded-full'></div>
-                <p>{item.comments == 0 ? "No comments" : item.comments + " comments"}</p>
+                <p>{item?.date}</p>
               </div>
             </article>
           ))}

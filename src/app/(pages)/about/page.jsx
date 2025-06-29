@@ -5,12 +5,12 @@ import AboutUs from '@/components/home/about-us'
 import Box from '@/components/home/box'
 const AboutPage = () => {
   return (
-    <main className=' xl:space-y-24  md:space-y-16 space-y-10'>
+    <div className=' xl:space-y-24  md:space-y-16 space-y-10'>
       <PageHeader title={'About Us'} />
       <Welcome />
       <AboutUs />
       <Box withBg={false}/>
-    </main>
+    </div>
   )
 }
 

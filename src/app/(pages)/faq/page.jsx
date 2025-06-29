@@ -6,7 +6,7 @@ import Image from 'next/image'
 
 const FaqPage = () => {
   return (
-    <main className=' xl:space-y-24  md:space-y-16 space-y-10'>
+    <div className=' xl:space-y-24  md:space-y-16 space-y-10'>
       <PageHeader title={'FAQ'} />
       <section style={{
         backgroundImage: "url(/home/services/services-bg.svg)"
@@ -15,8 +15,8 @@ const FaqPage = () => {
           {/* content */}
           <div className='md:col-span-6 col-span-12 space-y-6'>
             <p className='font-bold text-primary ' style={{ letterSpacing: '6px' }}>FAQ</p>
-            <h2 className='xl:text-5xl  text-3xl font-bold '>Best Question for You</h2>
-            <p className='text-sm font-bold text-gray-500'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed bibendum vehicula vehicula. Aliquam non urna eu nisi placerat hendrerit.</p>
+            <h2 className='xl:text-5xl  text-3xl font-bold '>Frequently Asked Questions</h2>
+            <p className='text-sm font-bold text-gray-500'>Redefining malware defense through speed and intelligence. AI that sees beyond signatures. Thinks. Adapts. Protects.</p>
             <FaqAccordion title={"About Intera"} faq={faqs}/>
             <FaqAccordion title={"We Save Every Data"} faq={faqsTwo}/>
           </div>
@@ -27,7 +27,7 @@ const FaqPage = () => {
         </div>
       </section>
       <Box withBg={false} />
-    </main>
+    </div>
   )
 }
 

@@ -9,7 +9,7 @@ import PageDropDown from './pages-dropdown'
 
 const Navbar = () => {
   return (
-    <nav className='  py-6 bg-[#152E3A]   font-[family-name:var(--font-fira)]   '>
+    <nav className='  py-6 bg-background fixed top-0 start-0 end-0 z-50   font-[family-name:var(--font-fira)]  '>
       <div className='container  flex items-center justify-between  '>
         {/* logo */}
         <Link href='/' className='text-2xl font-bold text-white'>

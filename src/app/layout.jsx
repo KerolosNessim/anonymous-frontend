@@ -2,6 +2,7 @@ import Footer from "@/components/shared/footer";
 import Navbar from "@/components/shared/navbar";
 import { Fira_Code, Geist } from "next/font/google";
 import "./globals.css";
+import ScrollToTop from "@/components/shared/scroll-top-btn";
 
 
 const geistSans = Geist({
@@ -27,12 +28,11 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${geistSans.className} ${firaCode.variable}  antialiased bg-background text-white `}
+        className={`${geistSans.className} ${firaCode.variable}  antialiased bg-background text-white  `}
       >
-
+        <ScrollToTop/>
         <Navbar />
-        <main >{children}</main>
-
+        <main className="pt-22">{children}</main>
         <Footer />
       </body>
     </html>

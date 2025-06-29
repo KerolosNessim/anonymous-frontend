@@ -6,11 +6,11 @@ import React from 'react'
 const ServicesPage
  = () => {
   return (
-    <main className=' xl:space-y-24  md:space-y-16 space-y-10'>
+    <div className=' xl:space-y-24  md:space-y-16 space-y-10'>
       <PageHeader title={'Services'} />
       <Services />
       <Box withBg={false}/>
-    </main>
+    </div>
   )
 }
 

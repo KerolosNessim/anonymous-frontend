@@ -5,12 +5,14 @@ import Contact from "@/components/home/contact";
 import HeroSection from "@/components/home/hero-section";
 import Services from "@/components/home/services";
 import Welcome from "@/components/home/welcome";
+import CustomMarquee from "@/components/shared/custom-marquee";
 
 
 export default function Home() {
   return (
-    <main className="xl:space-y-28 space-y-20 ">
+    <div className="xl:space-y-28 space-y-20 ">
       <HeroSection />
+      <CustomMarquee/>
       <Welcome />
       <AboutUs />
       <Services />
@@ -19,6 +21,6 @@ export default function Home() {
         <Box />
       </div>
       <Contact/>
-    </main>
+    </div>
   );
 }

@@ -5,13 +5,13 @@ import React from 'react'
 
 const BlogsPage = () => {
   return (
-    <main className=' xl:space-y-24  md:space-y-16 space-y-10'>
+    <div className=' xl:space-y-24  md:space-y-16 space-y-10'>
       <PageHeader title={'Blogs'} />
       <div>
         <Blogs />
         <Box />
       </div>
-    </main>
+    </div>
   )
 }
 

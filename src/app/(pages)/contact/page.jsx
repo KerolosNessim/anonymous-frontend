@@ -4,11 +4,11 @@ import PageHeader from '@/components/shared/page-header'
 import Box from '@/components/home/box'
 const ContactPage = () => {
   return (
-    <main className=' xl:space-y-24  md:space-y-16 space-y-10'>
+    <div className=' xl:space-y-24  md:space-y-16 space-y-10'>
       <PageHeader title={'Contact Us'} />
       <Contact />
       <Box withBg={false} />
-    </main>
+    </div>
   )
 }
 
