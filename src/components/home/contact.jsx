@@ -12,9 +12,9 @@ const Contact = () => {
         <h2 className='xl:text-4xl  text-3xl font-bold leading-tight'>Get In Touch</h2>
         <p className='text-sm  text-gray-500'>Have questions, feedback, or a partnership inquiry? We would love to hear from you.</p>
         {/* icons */}
-        <div className='grid grid-cols-12 items-center gap-8'>
+        <div className='grid grid-cols-12 items-center gap-8 '>
           {contacts.map((item, idx) => (
-            <div key={idx} className='col-span-6 flex items-center gap-4'>
+            <div key={idx} className='xl:col-span-6 col-span-12 flex items-center gap-4 max-xl:justify-center'>
               <Image src={item.img} alt={item.title} width={50} height={50} />
               <div>
                 <p className='font-bold xl:text-xl text-lg'>{item.title}</p>

@@ -10,8 +10,8 @@ const Blogs = () => {
         {/* content */}
         <div className='text-center xl:max-w-xl xl:mx-auto space-y-6'>
           <p className='font-bold text-primary ' style={{ letterSpacing: '6px' }}>LATEST NEWS</p>
-          <h2 className='xl:text-4xl  text-3xl font-bold '>Our News From Intera</h2>
-          <p className='text-sm  text-gray-500'>Maecenas eros dui, tempus sit amet quam ac, ultrices vehicula elit. Sed euismod vel tortor et luctus. In viverra finibus velit et ullamcorper. Vivamus eleifend</p>
+          <h2 className='xl:text-4xl  text-3xl font-bold '>Our News From Anonymous</h2>
+          <p className='text-sm  text-gray-500'>Detect, analyze, and neutralize cyber threats instantly—protecting your data with smart, reliable, real-time defense</p>
         </div>
         {/* grid */}
         <div className='grid grid-cols-12 gap-4'>

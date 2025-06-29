@@ -6,6 +6,7 @@ import HeroSection from "@/components/home/hero-section";
 import Services from "@/components/home/services";
 import Welcome from "@/components/home/welcome";
 import CustomMarquee from "@/components/shared/custom-marquee";
+import { use } from "react";
 
 
 export default function Home() {
