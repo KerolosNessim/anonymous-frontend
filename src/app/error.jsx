@@ -1,6 +1,7 @@
 'use client' // Error boundaries must be Client Components
 
 import { useEffect } from 'react'
+import { BiErrorAlt } from "react-icons/bi";
 
 export default function Error({ error, reset }) {
   useEffect(() => {
@@ -10,9 +11,10 @@ export default function Error({ error, reset }) {
 
   return (
     <div style={{ backgroundImage: "url(/home/services/services-bg.svg)" }} className='w-full h-[90vh] flex items-center justify-center bg-cover '>
-      <div className='  text-center space-y-6'>
-        <h1 className=' xl:text-5xl  text-4xl  font-bold font-[family-name:var(--font-fira)]'>Oops! Something Went Wrong.</h1>
-        <h2 className='xl:text-5xl  text-4xl font-bold leading-tight'>Get In Touch</h2>
+      <div className='container  text-center space-y-6'>
+        <BiErrorAlt className='text-7xl text-primary mx-auto' />
+        <h1 className=' xl:text-4xl  text-3xl  font-bold font-[family-name:var(--font-fira)] '> Oops! Something Went Wrong.</h1>
+        <h2 className='xl:text-3xl  text-xl font-bold leading-tight'>Get In Touch</h2>
         <p className='text-sm  text-gray-500 '>We couldn’t find the page you’re looking for.
 
           It might have been moved, deleted, or the link you followed may be broken.</p>

@@ -130,36 +130,10 @@ export const services = [
     <li>Provides actionable intelligence for threat hunting and defense hardening.</li>
     <li>Generates comprehensive, automated reports summarizing the analysis, saving your team critical time and effort.</li>
   </ul>`
-  
+
   },
 
 ]
-// export const blogs = [
-//   {
-//     img: "/home/about/about-us.svg",
-//     title: "Using Blockchain Technology to Boost Cybersecurity",
-//     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.",
-//     created_at: "August 08, 2023 ",
-//     author: "John Doe",
-//     comments: 2
-//   },
-//   {
-//     img: "/home/about/about-us.svg",
-//     title: "How do i Get Started on a Cybersecurity Career In Intera",
-//     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.",
-//     created_at: "August 08, 2023 ",
-//     author: "John Doe",
-//     comments: 10
-//   },
-//   {
-//     img: "/home/about/about-us.svg",
-//     title: "8 Cyber security professionals share their essential reads",
-//     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.",
-//     created_at: "August 08, 2023 ",
-//     author: "John Doe",
-//     comments: 0
-//   },
-// ]
 export const contacts = [
   {
     img: "/home/contact/phone.svg",
@@ -201,10 +175,10 @@ export const faqsTwo = [
     answer: "TTP stands for Tactics, Techniques, and Procedures. It is a framework used to describe the behavior of a threat actor. Our reports map malware to the MITRE ATT&CK framework to show you exactly how it might try to achieve its goals, such as data exfiltration or persistence."
   },
 ]
-export const  blogs = [
+export const blogs = [
   {
     id: 1,
-    img:"/home/blogs/blog1.jpg",
+    img: "/home/blogs/blog1.jpg",
     title: "The End of an Era: Why Traditional Antivirus Can't Keep Up",
     author: "The Anonymous Defenders Team",
     date: "June 29, 2025",
@@ -309,3 +283,110 @@ The emergence of AML doesn't mean AI-based security is a failure. On the contrar
     ]
   }
 ];
+export const team = [
+  {
+    id: 1,
+    img: "/home/team/karim-gomaa.png",
+    name: "Karim Gomaa",
+    role: "Lead/RE & Malware Analysis ",
+    links: 
+      {
+      linkedin: "https://www.linkedin.com/in/karim-hesham-a6105b227",
+      github: "https://github.com/KarimHesham23",
+      facebook:"https://www.facebook.com/share/19jPqXnXyi/"
+      },
+
+  },
+  {
+    id: 2,
+    img: "/home/team/karim-hesham.png",
+    name: "Karim Hesham",
+    role: "Member/ Deep Learning",
+    links: 
+      {
+      linkedin: "https://www.linkedin.com/in/karim-hesham-a6105b227",
+      github: "https://github.com/KarimHesham23",
+      facebook:"https://www.facebook.com/share/19jPqXnXyi/"
+      },
+
+  },
+  {
+    id: 3,
+    img: "/home/team/karim-hashem.png",
+    name: "Kareem Wali",
+    role: "Member/Back-end",
+    links: 
+      {
+      linkedin: "https://www.linkedin.com/in/karim-hesham-a6105b227",
+      github: "https://github.com/KarimHesham23",
+      facebook:"https://www.facebook.com/share/19jPqXnXyi/"
+      },
+
+  },
+  {
+    id: 4,
+    img: "/home/team/abdo.png",
+    name: "Abdulrahman Nasr ",
+    role: "Member/Business Analysis",
+    links: 
+      {
+      linkedin: "https://www.linkedin.com/in/karim-hesham-a6105b227",
+      github: "https://github.com/KarimHesham23",
+      facebook:"https://www.facebook.com/share/19jPqXnXyi/"
+      },
+
+  },
+  {
+    id: 5,
+    img: "/home/team/philo.png",
+    name: "Philopater Rafat ",
+    role: "Member/Machine Learning",
+    links: 
+      {
+      linkedin: "https://www.linkedin.com/in/karim-hesham-a6105b227",
+      github: "https://github.com/KarimHesham23",
+      facebook:"https://www.facebook.com/share/19jPqXnXyi/"
+      },
+
+  },
+  {
+    id: 6,
+    img: "/home/team/kero.png",
+    name: "Kerolos Nessim",
+    role: "Member/Front-end",
+    links: 
+      {
+      linkedin: "https://www.linkedin.com/in/karim-hesham-a6105b227",
+      github: "https://github.com/KarimHesham23",
+      facebook:"https://www.facebook.com/share/19jPqXnXyi/"
+      },
+
+  },
+  {
+    id: 7,
+    img: "/home/team/mina.png",
+    name: "Mina Nessim",
+    role: "Member/Front-end",
+    links: 
+      {
+      linkedin: "https://www.linkedin.com/in/karim-hesham-a6105b227",
+      github: "https://github.com/KarimHesham23",
+      facebook:"https://www.facebook.com/share/19jPqXnXyi/"
+      },
+
+  },
+  {
+    id: 8,
+    img: "/home/team/khaled.png",
+    name: "Khaled Kayed",
+    role: "Member/RE & Malware Analysis",
+    links: 
+      {
+      linkedin: "https://www.linkedin.com/in/karim-hesham-a6105b227",
+      github: "https://github.com/KarimHesham23",
+      facebook:"https://www.facebook.com/share/19jPqXnXyi/"
+      },
+
+  },
+
+]

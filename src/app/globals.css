@@ -129,11 +129,12 @@
   margin-inline: auto;
   width:90%;
   @variant lg {
-   width: 70%;
+   width: 75%;
   }
+
 }
 
-.loader {
+/* .loader {
   width: 50px;
   aspect-ratio: 1;
   display: grid;
@@ -157,4 +158,42 @@
 }
 @keyframes l15{ 
   100%{transform: rotate(1turn)}
+} */
+
+
+.loader {
+  height: 150px;
+  aspect-ratio: 1;
+  padding: 10px;
+  border-radius: 20px;
+  box-sizing: border-box;
+  position: relative;
+  mask: conic-gradient(#000 0 0) content-box exclude,conic-gradient(#000 0 0);
+  filter: blur(12px);
+}
+.loader:before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: repeating-conic-gradient(#0000 0 5%,var(--primary),#0000 20% 50%);
+  animation: l3 1.5s linear infinite;
+}
+@keyframes l3 {
+  to {rotate: 1turn}
+}
+
+::-webkit-scrollbar {
+  width: 8px; 
+  height: 8px; 
+}
+::-webkit-scrollbar-track {
+  background: var(--background);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--primary);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary);
 }

@@ -68,7 +68,39 @@ export function Globe({
     }
   };
 
+  // useEffect(() => {
+  //   const onResize = () => {
+  //     if (canvasRef.current) {
+  //       width = canvasRef.current.offsetWidth;
+  //     }
+  //   };
+
+  //   window.addEventListener("resize", onResize);
+  //   onResize();
+
+  //   const globe = createGlobe(canvasRef.current, {
+  //     ...config,
+  //     width: width * 2,
+  //     height: width * 2,
+  //     onRender: (state) => {
+  //       if (!pointerInteracting.current) phi += 0.005;
+  //       state.phi = phi + rs.get();
+  //       state.width = width * 2;
+  //       state.height = width * 2;
+  //     },
+  //   });
+
+  //   setTimeout(() => (canvasRef.current.style.opacity = "1"), 0);
+  //   return () => {
+  //     globe.destroy();
+  //     window.removeEventListener("resize", onResize);
+  //   };
+  // }, [rs, config]);
   useEffect(() => {
+    if (!canvasRef.current) return;
+
+    let destroyed = false;
+
     const onResize = () => {
       if (canvasRef.current) {
         width = canvasRef.current.offsetWidth;
@@ -83,6 +115,7 @@ export function Globe({
       width: width * 2,
       height: width * 2,
       onRender: (state) => {
+        if (destroyed) return;
         if (!pointerInteracting.current) phi += 0.005;
         state.phi = phi + rs.get();
         state.width = width * 2;
@@ -90,13 +123,19 @@ export function Globe({
       },
     });
 
-    setTimeout(() => (canvasRef.current.style.opacity = "1"), 0);
+    setTimeout(() => {
+      if (canvasRef.current) {
+        canvasRef.current.style.opacity = "1";
+      }
+    }, 0);
+
     return () => {
+      destroyed = true;
       globe.destroy();
       window.removeEventListener("resize", onResize);
     };
   }, [rs, config]);
-
+  
   return (
     (<div
       className={cn(" inset-0 mx-auto aspect-[1/1] w-full max-w-[600px] ", className)}>
