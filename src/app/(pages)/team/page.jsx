@@ -16,7 +16,7 @@ const TeamPage = () => {
           <div className='container space-y-10'>
             {/* content */}
             <div className='text-center xl:max-w-xl xl:mx-auto space-y-6'>
-              <p className='font-bold text-primary ' style={{ letterSpacing: '6px' }}>INTERA TEAM</p>
+              <p className='font-bold text-primary ' style={{ letterSpacing: '6px' }}>Anonymous TEAM</p>
               <h2 className='xl:text-4xl  text-3xl font-bold '>The Minds Behind Anonymous</h2>
               <p className='text-sm  text-gray-500'>Our team collaborated to develop a university capstone project focused on real-world cybersecurity threats and solutions.</p>
             </div>
