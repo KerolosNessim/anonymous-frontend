@@ -3,7 +3,7 @@ import Globe from '../magicui/globe'
 
 const HeroSection = () => {
   return (
-    <section className='relative  xl:mt-12 mt-8'>
+    <section className='relative  xl:mt-12 mt-2'>
       <div className=" container flex flex-col-reverse xl:flex xl:flex-row items-center justify-between   ">
         <div className=' max-xl:text-center xl:space-y-8 space-y-6 xl:max-w-3/5'>
           <h1 className=' leading-snug  font-bold xl:text-[65px] font-[family-name:var(--font-fira)] md:text-4xl text-3xl'> Malwares hide, We <span className='text-primary drop-shadow-2xl drop-shadow-primary'>shine</span></h1>
