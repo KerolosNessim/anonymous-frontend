@@ -21,7 +21,7 @@ const TeamPage = () => {
               <p className='text-sm  text-gray-500'>Our team collaborated to develop a university capstone project focused on real-world cybersecurity threats and solutions.</p>
             </div>
             {/* grid */}
-            <div className='grid grid-cols-12 gap-6'>
+              <div className='grid grid-cols-12 gap-6'>
               {team.map((item, idx) => (
                 <div key={idx} className='text-center col-span-12 md:col-span-6 xl:col-span-4 space-y-4 border border-primary rounded-xl overflow-hidden p-6'>
                   <Image src={item.img} alt='profile' width={500} height={500} className='mx-auto w-full h-60 rounded-xl object-contain' />

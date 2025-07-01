@@ -21,7 +21,7 @@ const Blogs = () => {
                 <Image src={item?.img} alt={item?.title} fill className='object-cover' />
               </figure >
               <div className='px-4 py-6 space-y-4'>
-                <h3 className=' font-bold  xl:text-2xl text-xl'>{item?.title}</h3>
+                <h3 className=' font-bold line-clamp-2 xl:text-2xl text-xl'>{item?.title}</h3>
                 <p className='text-gray-400 line-clamp-3'>{item?.content}</p>
                 <Link href={`/blogs/${item?.id}`} className='text-primary flex items-center  gap-2 font-bold capitalize hover:gap-4 hover:text-white transition-all duration-300 '>
                   learn more <MdKeyboardDoubleArrowRight size={20} />
