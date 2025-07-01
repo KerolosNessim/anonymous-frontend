@@ -19,7 +19,7 @@ const GLOBE_CONFIG = {
   diffuse: 0.4,
   mapSamples: 10000,
   mapBrightness: 1.6,
-  baseColor: [25 / 255, 36 / 255, 45 / 255],
+  baseColor: [0.082, 0.180, 0.227],
   markerColor: [21 / 255, 171 / 255, 217 / 255],
   glowColor: [21 / 255, 171 / 255, 217 / 255],
   markers: [
@@ -107,7 +107,7 @@ export default function Globe({
       className={cn("mx-auto aspect-[1/1] w-full max-w-[600px] ", className)}>
       <canvas
         className={cn(
-          " size-full opacity-0 transition-opacity duration-500 [contain:layout_paint_size]"
+          " size-full opacity-0 transition-opacity duration-500 [contain:layout_paint_size] "
         )}
         ref={canvasRef}
         onPointerDown={(e) => {
