@@ -14,7 +14,7 @@ const Services = () => {
         <div className='text-center xl:max-w-xl xl:mx-auto space-y-6'>
           <p className='font-bold text-primary ' style={{ letterSpacing: '6px' }}>Our Services</p>
           <h2 className='xl:text-4xl  text-3xl font-bold '> Our Advanced Security Services</h2>
-          <p className='text-sm  text-gray-500'>A Multi-Layered Approach to Malware Analysis.</p>
+          <p className='text-sm  text-gray-400'>A Multi-Layered Approach to Malware Analysis.</p>
         </div>
         {/* grid */}
         <div className='grid grid-cols-12 gap-4'>
@@ -24,7 +24,7 @@ const Services = () => {
               <h3 className=' font-bold text-primary xl:text-2xl text-xl '>{item.title}</h3>
               <p className=' '>{item.desc}</p>
               <Link href={`/services/${item.id}`} className='text-primary flex items-center justify-center gap-2 font-bold capitalize  hover:gap-4 hover:text-white transition-all duration-300 '>
-              learn more <IoMdArrowDroprightCircle  />
+                learn more <IoMdArrowDroprightCircle />
               </Link>
             </div>
           ))}

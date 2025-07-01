@@ -5,12 +5,12 @@ import { MdOutlineSecurity } from "react-icons/md";
 const CustomMarquee = () => {
   return (
     <div
-      className="bg-primary "
+      className="bg-primary  xl:my-28 "
     >
-      <div className="overflow-hidden whitespace-nowrap bg-background -skew-y-1 mt-10 ">
+      <div className="overflow-hidden whitespace-nowrap bg-background -skew-y-1  ">
         <Marquee
           autoFill={true}
-          pauseOnHover={true}
+          pauseOnHover={false}
           speed={30}
           className=" overflow-hidden "
         >
@@ -19,7 +19,7 @@ const CustomMarquee = () => {
             <MdOutlineSecurity size={20} className="text-primary" />
             <span >Anonymous</span>
             <MdOutlineSecurity size={20} className="text-primary" />
-            <span >Defender</span>
+            <span >Defenders</span>
           </div>
         </Marquee>
       </div>

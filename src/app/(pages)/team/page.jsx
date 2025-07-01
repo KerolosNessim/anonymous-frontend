@@ -18,16 +18,16 @@ const TeamPage = () => {
             <div className='text-center xl:max-w-xl xl:mx-auto space-y-6'>
               <p className='font-bold text-primary ' style={{ letterSpacing: '6px' }}>Anonymous TEAM</p>
               <h2 className='xl:text-4xl  text-3xl font-bold '>The Minds Behind Anonymous</h2>
-              <p className='text-sm  text-gray-500'>Our team collaborated to develop a university capstone project focused on real-world cybersecurity threats and solutions.</p>
+              <p className='text-sm  text-gray-400'>Our team collaborated to develop a university capstone project focused on real-world cybersecurity threats and solutions.</p>
             </div>
             {/* grid */}
-              <div className='grid grid-cols-12 gap-6'>
+            <div className='grid grid-cols-12 gap-6'>
               {team.map((item, idx) => (
                 <div key={idx} className='text-center col-span-12 md:col-span-6 xl:col-span-4 space-y-4 border border-primary rounded-xl overflow-hidden p-6'>
                   <Image src={item.img} alt='profile' width={500} height={500} className='mx-auto w-full h-60 rounded-xl object-contain' />
                   <div className='space-y-1'>
                     <h2 className='font-bold text-2xl text-primary'>{item.name}</h2>
-                    <p className=' text-gray-500'>{item.role}</p>
+                    <p className=' text-gray-400'>{item.role}</p>
                   </div >
                   {/* icons */}
                   <div className='flex items-center justify-center gap-4 '>

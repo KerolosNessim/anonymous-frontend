@@ -12,7 +12,7 @@ const SideServices = ({ services }) => {
           </figure>
           <div className='space-y-2'>
             <h3 className='font-bold text-lg line-clamp-2'>{item?.title}</h3>
-            <p className='text-sm text-gray-500 line-clamp-2'>{item?.desc}  </p>
+            <p className='text-sm text-gray-400 line-clamp-2'>{item?.desc}  </p>
             <Link href={`/services/${item?.id}`} className='text-primary flex items-center  gap-2 font-bold capitalize hover:gap-4 hover:text-white transition-all duration-300 '>
               learn more <MdKeyboardDoubleArrowRight size={20} />
             </Link>

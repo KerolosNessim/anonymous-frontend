@@ -7,8 +7,8 @@ import {
 } from "@/components/ui/sheet"
 import { Menu } from "lucide-react"
 import Link from "next/link"
-import AnalysisLink from "./analysis-link"
 import PageDropDown from "./pages-dropdown"
+import AuthButtons from "./auth-buttons"
 
 const NavbarSheet = ({ links }) => {
   return (
@@ -34,7 +34,7 @@ const NavbarSheet = ({ links }) => {
           </ul>
           {/* get started and mode switch */}
           <div className='flex items-center justify-center gap-4 mt-6'>
-            <AnalysisLink isSheet={true} />
+            <AuthButtons/>
           </div>
         </SheetHeader>
 

@@ -16,9 +16,9 @@ const FaqPage = () => {
           <div className='md:col-span-6 col-span-12 space-y-6'>
             <p className='font-bold text-primary ' style={{ letterSpacing: '6px' }}>FAQ</p>
             <h2 className='xl:text-5xl  text-3xl font-bold '>Frequently Asked Questions</h2>
-            <p className='text-sm font-bold text-gray-500'>Redefining malware defense through speed and intelligence. AI that sees beyond signatures. Thinks. Adapts. Protects.</p>
-            <FaqAccordion title={"About Intera"} faq={faqs}/>
-            <FaqAccordion title={"We Save Every Data"} faq={faqsTwo}/>
+            <p className='text-sm font-bold text-gray-400'>Redefining malware defense through speed and intelligence. AI that sees beyond signatures. Thinks. Adapts. Protects.</p>
+            <FaqAccordion title={"About Intera"} faq={faqs} />
+            <FaqAccordion title={"We Save Every Data"} faq={faqsTwo} />
           </div>
           {/* image */}
           <div className='md:col-span-6 col-span-12 relative max-md:hidden  '>

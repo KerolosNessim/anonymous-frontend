@@ -72,24 +72,24 @@ const ContactForm = () => {
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6 col-span-12 md:col-span-6 bg-[#152E3A] border border-primary rounded-xl xl:p-12 p-6">
         <div className="space-y-4">
 
-        <h3 className="xl:text-4xl text-2xl font-bold text-primary">You Have Question?</h3>
-        <p className=" text-gray-500">Maecenas eros dui, tempus sit amet quam ac, ultrices vehicula elit.</p>
+          <h3 className="xl:text-4xl text-2xl font-bold text-primary">You Have Question?</h3>
+          <p className=" text-gray-400">We’d love to hear from you!</p>
         </div>
         {/* name */}
-        {inputs.map((input ,idx) => (
-          <FormField 
-          key={idx}
-          control={form.control}
-          name={input.name}
-          render={({ field }) => (
-            <FormItem>
-              <FormControl>
-                <Input placeholder={input.placeholder} type={input.type} className="h-12 border-primary focus-visible:ring-primary focus-visible:outline-0 " {...field} />
-              </FormControl>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
+        {inputs.map((input, idx) => (
+          <FormField
+            key={idx}
+            control={form.control}
+            name={input.name}
+            render={({ field }) => (
+              <FormItem>
+                <FormControl>
+                  <Input placeholder={input.placeholder} type={input.type} className="h-12 border-primary focus-visible:ring-primary focus-visible:outline-0 " {...field} />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
         ))}
         {/* message */}
         <FormField

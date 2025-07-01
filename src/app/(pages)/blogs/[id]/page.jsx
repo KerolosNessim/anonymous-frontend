@@ -5,7 +5,7 @@ import Image from 'next/image'
 import React from 'react'
 
 const SingleBlogPage = ({ params }) => {
-  const id =  params?.id
+  const id = params?.id
   const blog = blogs?.find((item) => item.id === Number(id))
   const otherBlogs = blogs?.filter((item) => item.id !== Number(id))
   return (
@@ -25,13 +25,13 @@ const SingleBlogPage = ({ params }) => {
               {blog?.references.map((ref, refIndex) => (
                 <a
                   key={refIndex}
-                    href={ref.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
+                  href={ref.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="bg-[#152E3A]  p-3 rounded-md block hover:bg-primary/80 transition-all duration-300"
-                  >
-                    {ref.title}-{ref.source}
-                  </a>
+                >
+                  {ref.title}-{ref.source}
+                </a>
               ))}
             </div>
           </div>
@@ -43,7 +43,7 @@ const SingleBlogPage = ({ params }) => {
             <div>
               <p className='font-bold  text-primary text-lg'>By:</p>
               <p className='font-bold text-lg'>{blog?.author}</p>
-              <p className='text-sm text-gray-500'>Created at : {blog?.date}</p>
+              <p className='text-sm text-gray-400'>Created at : {blog?.date}</p>
             </div>
           </div>
           <div className='space-y-6'>

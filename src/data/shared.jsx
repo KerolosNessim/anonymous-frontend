@@ -33,6 +33,16 @@ export const pages = [
     label: 'FAQ'
   },
 ]
+export const auth = [
+  {
+    href: '/signup',
+    label: 'Sign Up'
+  },
+  {
+    href: '/login',
+    label: 'Login'
+  },
+]
 export const socialIcons = [
   {
     href: 'https://www.facebook.com/',

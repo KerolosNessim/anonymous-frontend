@@ -12,11 +12,11 @@ const AnalysisPage = () => {
           height={175}
           className="mx-auto"
         />
-        <p className="text-center md:max-w-2xl mx-auto font-[family-name:var(--font-fira)] font-semibold text-sm leading-snug text-gray-500  max-w-[600px] ">
+        <p className="text-center md:max-w-2xl mx-auto font-[family-name:var(--font-fira)] font-semibold text-sm leading-snug text-gray-400  max-w-[600px] ">
           Analyse suspicious files, domains, IPs and URLs to detect malware and
           other breaches, automatically share them with the security community.
         </p>
-        <FileForm/>
+        <FileForm />
       </section>
 
     </div>

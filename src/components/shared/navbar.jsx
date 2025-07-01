@@ -4,6 +4,7 @@ import Link from 'next/link'
 import AnalysisLink from './analysis-link'
 import NavbarSheet from './navbar-sheet'
 import PageDropDown from './pages-dropdown'
+import LoginPopover from './auth-buttons'
 
 
 
@@ -16,10 +17,10 @@ const Navbar = () => {
           <Image src="/logo-nav.png" alt="Logo" width={150} height={100} />
         </Link>
         {/* links */}
-        <ul className='xl:flex items-center gap-8 hidden '>
+        <ul className='xl:flex items-center  gap-6  hidden '>
           {links.map((link,idx) => (
             <li key={idx}>
-              <Link href={link.href} className='block text-lg font-medium text-white hover:text-primary   transition-all duration-300'>
+              <Link href={link.href} className='block text-lg  font-medium text-white hover:text-primary   transition-all duration-300'>
                 {link.label}
               </Link>
             </li>
@@ -31,7 +32,7 @@ const Navbar = () => {
         </ul>
         {/* get started and mode switch */}
         <div className='xl:flex items-center gap-4 hidden'>
-          <AnalysisLink />
+          <LoginPopover/>
         </div>
           <NavbarSheet links={links}/>
       </div>

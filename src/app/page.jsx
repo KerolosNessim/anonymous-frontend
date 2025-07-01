@@ -10,7 +10,7 @@ import CustomMarquee from "@/components/shared/custom-marquee";
 
 export default function Home() {
   return (
-    <div className=" space-y-20 ">
+    <div className=" space-y-20 xl:space-y-24 ">
       <HeroSection />
       <CustomMarquee/>
       <Welcome />
