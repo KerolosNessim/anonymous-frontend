@@ -3,6 +3,7 @@ import Navbar from "@/components/shared/navbar";
 import { Fira_Code, Geist } from "next/font/google";
 import "./globals.css";
 import ScrollToTop from "@/components/shared/scroll-top-btn";
+import RouteLoading from "@/components/shared/route-loading";
 
 
 const geistSans = Geist({
@@ -30,6 +31,7 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.className} ${firaCode.variable}  antialiased bg-background text-white  `}
       >
+        <RouteLoading/>
         <ScrollToTop/>
         <Navbar />
         <main className="pt-22">{children}</main>
