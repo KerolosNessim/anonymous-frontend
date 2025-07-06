@@ -188,7 +188,7 @@ export const faqsTwo = [
 export const blogs = [
   {
     id: 1,
-    img: "/home/blogs/blog1.jpg",
+    img: "/home/blogs/blog1.webp",
     title: "The End of an Era: Why Traditional Antivirus Can't Keep Up",
     author: "The Anonymous Defenders Team",
     date: "June 29, 2025",
@@ -218,7 +218,7 @@ These advanced systems can identify suspicious behaviors—like a program attemp
   },
   {
     id: 2,
-    img: "/home/blogs/blog2.jpg",
+    img: "/home/blogs/blog2.webp",
     title: "The Linguistics of Malice: How AI Learns to Read Malware's Intent",
     author: "The Anonymous Defenders Team",
     date: "June 29, 2025",
@@ -252,7 +252,7 @@ By training on thousands of examples, NLP models become expert "linguists" capab
   },
   {
     id: 3,
-    img: "/home/blogs/blog3.jpg",
+    img: "/home/blogs/blog3.webp",
 
     title: "The Next Frontier: Defending Our AI Defenders",
     author: "The Anonymous Defenders Team",
