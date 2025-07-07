@@ -1,13 +1,24 @@
+"use client"
 import AlertWarning from '@/components/shared/alert-warning';
 import PageHeader from '@/components/shared/page-header'
 import { Separator } from '@/components/ui/separator'
+import { deleteToken } from '@/lib/cookies';
+import { useUserStore } from '@/stores/user';
 import Image from 'next/image'
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 import React from 'react'
 import { FaHome, FaShieldVirus } from "react-icons/fa";
 import { IoLogOutSharp } from "react-icons/io5";
 
 const ProfilePage = () => {
+  const { user, clearUser } = useUserStore();
+  const router = useRouter();
+  function logout() {
+    router.push('/');
+    clearUser();
+    deleteToken();
+  }
   return (
     <section className='space-y-10'>
       <PageHeader title={"Profile"} />
@@ -16,10 +27,10 @@ const ProfilePage = () => {
         <div className='col-span-12 md:col-span-4 bg-[#152E3A] border border-primary rounded-xl p-6'>
 
           <div className='space-y-2'>
-            <Image src="/home/profile.jpg" alt="profile" width={500} height={500} className='size-40 object-cover rounded-full mx-auto ' />
+            <Image src="/profile-placeholder.jpg" alt="profile" width={500} height={500} className='size-40 object-cover rounded-full mx-auto ' />
             <div className='text-center space-y-1'>
-              <h2 className='text-primary font-bold md:text-2xl text-xl'>kerolos Nessim</h2>
-              <p className='text-gray-400 '>keroNessim@gmail.com</p>
+              <h2 className='text-primary font-bold md:text-2xl text-xl'>{user?.user?.name}</h2>
+              <p className='text-gray-400 '>{user?.user?.email}</p>
             </div>
             <Separator className="bg-primary mt-4" />
           </div>
@@ -38,7 +49,7 @@ const ProfilePage = () => {
               </Link>
             </li>
             <li>
-              <button className='flex items-center w-full gap-2 p-2 text-xl font-bold  hover:bg-primary hover:text-white rounded-md transition-all duration-300 '>
+              <button onClick={logout} className='flex items-center w-full gap-2 p-2 text-xl font-bold  hover:bg-primary hover:text-white rounded-md transition-all duration-300 '>
                 <IoLogOutSharp size={20} />
                 Logout
               </button>
@@ -47,9 +58,10 @@ const ProfilePage = () => {
         </div>
         {/* user sampels */}
         <div className='col-span-12 md:col-span-8 bg-[#152E3A] border border-primary rounded-xl p-6'>
-          <AlertWarning>
+            {user?.history?.length==0 ?          <AlertWarning>
             No samples found
-          </AlertWarning>
+          </AlertWarning>: "history" }
+
         </div>
       </div>
 

@@ -1,13 +1,18 @@
 'use client'
 
-import { useEffect, useState } from 'react'
+import { useEffect, useState, useRef } from 'react'
 import { usePathname } from 'next/navigation'
 
 const RouteLoading = () => {
   const pathname = usePathname()
   const [loading, setLoading] = useState(false)
+  const isFirstLoad = useRef(true) 
 
   useEffect(() => {
+    if (isFirstLoad.current) {
+      isFirstLoad.current = false
+      return
+    }
     setLoading(true)
     const timer = setTimeout(() => {
       setLoading(false)

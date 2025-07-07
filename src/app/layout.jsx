@@ -4,7 +4,7 @@ import { Fira_Code, Geist } from "next/font/google";
 import "./globals.css";
 import ScrollToTop from "@/components/shared/scroll-top-btn";
 import RouteLoading from "@/components/shared/route-loading";
-
+import { Toaster } from "@/components/ui/sonner"
 
 const geistSans = Geist({
   subsets: ["latin"],
@@ -31,6 +31,7 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.className} ${firaCode.variable}  antialiased bg-background text-white  `}
       >
+        <Toaster position="top-center" expand={false} richColors />
         <RouteLoading/>
         <ScrollToTop/>
         <Navbar />

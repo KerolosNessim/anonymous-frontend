@@ -14,6 +14,9 @@ import {
 } from "@/components/ui/form"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
+import { toast } from "sonner"
+import { postData } from "@/api/post-data"
+import { RiLoader3Fill } from "react-icons/ri"
 const formSchema = z.object({
   name: z.string().min(2, {
     message: "name must be at least 2 characters.",
@@ -62,9 +65,21 @@ const ContactForm = () => {
     },
   })
 
-  // 2. Define a submit handler.
-  function onSubmit(values) {
+  const { formState: { isSubmitting } } = form
 
+  // 2. Define a submit handler.
+  async function onSubmit(values) {
+    const finalValues = {
+      email: values.email,
+      message: values.message
+    }
+
+    const response = await postData('/complaints', finalValues);
+    if (response.status === 201) {
+      toast.success("Message Sent Successfully");
+    } else {
+      toast.error("Something went wrong");
+    }
   }
 
   return (
@@ -109,7 +124,7 @@ const ContactForm = () => {
           )}
         />
 
-        <Button type="submit" className="px-16 h-12 font-[family-name:var(--font-fira)] font-semibold">send messages</Button>
+        <Button type="submit" className="px-16 h-12 w-1/2 font-[family-name:var(--font-fira)] font-semibold">{isSubmitting ? <RiLoader3Fill className="animate-spin" /> : "send messages"}</Button>
       </form>
     </Form>
   )
