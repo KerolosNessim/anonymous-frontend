@@ -104,6 +104,8 @@ const SignUpPage = () => {
   // 2. Define a submit handler.
   async function onSubmit(values) {
     const response = await postData('/signup', values);
+    console.log(response);
+    
     if (response.status === 201) {
       toast.success("Account created successfully");
       router.push('/login');

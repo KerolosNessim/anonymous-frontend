@@ -62,6 +62,8 @@ const LoginPage = () => {
   // 2. Define a submit handler.
   async function onSubmit(values) {
     const response = await postData('/login', values);
+    console.log(response);
+    
     if (response.status === 200) {
       toast.success("Loged in successfully");
       setToken(response.token);
