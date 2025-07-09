@@ -19,6 +19,23 @@ const ProfilePage = () => {
     clearUser();
     deleteToken();
   }
+  const formatDate = (dateString) => {
+    if (!dateString) return "";
+    const date = new Date(dateString);
+    const options = {
+      weekday: "long",
+      year: "numeric",
+      month: "long",
+      day: "numeric",
+      hour: "numeric",
+      minute: "2-digit",
+      hour12: true,
+      timeZone: "UTC",
+    };
+    return date.toLocaleString("en-US", options).replace(",", " -");
+  };
+
+
   return (
     <section className='space-y-10'>
       <PageHeader title={"Profile"} />
@@ -58,13 +75,23 @@ const ProfilePage = () => {
         </div>
         {/* user sampels */}
         <div className='col-span-12 md:col-span-8 bg-[#152E3A] border border-primary rounded-xl p-6'>
-            {user?.history?.length==0 ?          <AlertWarning>
-            No samples found
-          </AlertWarning>: "history" }
-
+          {user?.history?.length == 0 ?
+            <AlertWarning>
+              No samples found
+            </AlertWarning> :
+            user?.history?.map((sample, idx) => (
+              <div key={idx} className='rounded-md bg-background p-6'>
+                <ul className='space-y-3'>
+                  <li><span className="font-bold text-primary ">File Name:</span> {sample?.name}</li>
+                  <li ><span className="font-bold text-primary ">Analysis Time :</span> {formatDate(sample?.uploadDate)}</li>
+                  <li ><span className="font-bold text-primary ">Family :
+                  </span>{sample?.family?.length == 0 ? <span className='text-yellow-400'>No Family Found</span> : sample?.family?.map((family,idx)=><span key={idx} className="bg-primary px-3 py-1.5 text-sm  rounded-md mx-1">{family}</span>) }</li>
+                </ul>
+              </div>
+            ))
+          }
         </div>
       </div>
-
     </section>
   )
 }

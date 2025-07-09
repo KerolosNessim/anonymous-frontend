@@ -24,13 +24,15 @@ const FormSchema = z.object({
   file: z.custom((val) => val instanceof File && val.size > 0, {
     message: "File is required.",
   }),
+  password: z.string().nonempty("Password is required."),
 })
-export function FileForm({ setResponse }) {
+export function CompressedFileForm({ setResponse }) {
   const {user}=useUserStore()
   const form = useForm({
     resolver: zodResolver(FormSchema),
     defaultValues: {
       file: null,
+      password: "",
     },
   })
   const { formState: { isSubmitting } } = form;
@@ -38,6 +40,7 @@ export function FileForm({ setResponse }) {
     const token = getToken();
     const formData = new FormData();
     formData.append('file', data.file);
+    formData.append('password', data.password);
     if (token) {
       formData.append("userId", user?.user?._id);
       const response = await postData('/upload', formData, { Authorization: `Bearer ${token}` });
@@ -60,6 +63,8 @@ export function FileForm({ setResponse }) {
         toast.error("Something went wrong");
       }
     }
+   
+    
   }
 
 
@@ -73,21 +78,36 @@ export function FileForm({ setResponse }) {
           height={160}
           className="mx-auto"
         />
+        <div className=" grid grid-cols-12 gap-4">
+
         <FormField
           control={form.control}
           name="file"
           render={({ field }) => (
-            <FormItem >
-              <div className={"flex items-center gap-2 "}>
+            <FormItem className={"col-span-12 xl:col-span-6"}>
 
                 <FormControl>
                   <Input onChange={(e) => field.onChange(e.target.files[0])} type="file" className="border-primary text-primary " />
                 </FormControl>
-              </div>
+
+              
               <FormMessage />
             </FormItem>
           )}
         />
+        <FormField
+          control={form.control}
+          name="password"
+          render={({ field }) => (
+            <FormItem className={"col-span-12 xl:col-span-6"}>
+              <FormControl>
+                <Input placeholder="Password" type="password" className=" border-primary focus-visible:ring-primary focus-visible:outline-0 " {...field} />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+        </div>
         <Button type="submit" className={"px-8 w-full md:w-1/2 xl:w-1/4"}>{isSubmitting ? <RiLoader3Fill className="animate-spin" /> : "Upload File"}</Button>
         <p className="text-center text-xs text-white">
           By submitting data above, you are agreeing to our Terms of Service

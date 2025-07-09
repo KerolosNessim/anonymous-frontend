@@ -1,6 +1,6 @@
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { FileForm } from "./file-form"
-import { UrlForm } from "./url-form"
+import { UrlForm } from "./compressed-file-form"
 
 const AnalysisTabs = () => {
   return (
@@ -9,8 +9,8 @@ const AnalysisTabs = () => {
         <TabsTrigger value="file">File</TabsTrigger>
         <TabsTrigger value="url">Url</TabsTrigger>
       </TabsList>
-      <TabsContent value="file"><FileForm/></TabsContent>
-      <TabsContent value="url"><UrlForm/></TabsContent>
+      <TabsContent value="file"><FileForm /></TabsContent>
+      <TabsContent value="url"><UrlForm /></TabsContent>
     </Tabs>
   )
 }
