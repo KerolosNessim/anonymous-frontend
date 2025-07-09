@@ -1,8 +1,6 @@
-const BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL;
-
 export const getData = async (endpoint, headers = {}, options = {}) => {
   try {
-    const response = await fetch(`${BASE_URL}${endpoint}`, {
+    const response = await fetch(`https://anonymous-api.up.railway.app${endpoint}`, {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',
