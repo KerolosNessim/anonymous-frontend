@@ -148,17 +148,17 @@ export const contacts = [
   {
     img: "/home/contact/phone.svg",
     title: "Phone Number",
-    desc: "123-456-7890"
+    desc: "+0201002264114"
   },
   {
     img: "/home/contact/email.svg",
     title: "Email Address",
-    desc: "Wt6E0@example.com"
+    desc: "KarimM.Gomaa@outlook.com"
   },
   {
     img: "/home/contact/website.svg",
     title: "website",
-    desc: "www.awesomesite.com"
+    desc: "anonymous-frontend-l5z5.vercel.app"
   }
 ]
 export const faqs = [
@@ -301,9 +301,9 @@ export const team = [
     role: "Lead/RE & Malware Analysis ",
     links: 
       {
-      linkedin: "https://www.linkedin.com/in/karim-hesham-a6105b227",
-      github: "https://github.com/KarimHesham23",
-      facebook:"https://www.facebook.com/share/19jPqXnXyi/"
+      linkedin: "https://www.linkedin.com/in/karimmohamedgomaa",
+      github: "http://karimgomaa.me/",
+      facebook:"https://www.facebook.com/share/14Gn2d8Kfej/"
       },
 
   },
@@ -327,9 +327,9 @@ export const team = [
     role: "Member/Back-end",
     links: 
       {
-      linkedin: "https://www.linkedin.com/in/karim-hesham-a6105b227",
-      github: "https://github.com/KarimHesham23",
-      facebook:"https://www.facebook.com/share/19jPqXnXyi/"
+      linkedin: "www.linkedin.com/in/kareem-wally-40b105305",
+      github: "https://github.com/kareemwally",
+      facebook:"https://www.facebook.com/share/19Dm2k6uCi/?mibextid=wwXIfr"
       },
 
   },
@@ -340,9 +340,9 @@ export const team = [
     role: "Member/Business Analysis",
     links: 
       {
-      linkedin: "https://www.linkedin.com/in/karim-hesham-a6105b227",
-      github: "https://github.com/KarimHesham23",
-      facebook:"https://www.facebook.com/share/19jPqXnXyi/"
+      linkedin: "https://www.linkedin.com/in/abdelrahman-shaaban20?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+      github: "https://github.com/Abdelrahman-Nasr1",
+      facebook:"https://www.facebook.com/share/16nm58AGTU/?mibextid=wwXIfr"
       },
 
   },
@@ -353,9 +353,9 @@ export const team = [
     role: "Member/Machine Learning",
     links: 
       {
-      linkedin: "https://www.linkedin.com/in/karim-hesham-a6105b227",
-      github: "https://github.com/KarimHesham23",
-      facebook:"https://www.facebook.com/share/19jPqXnXyi/"
+      linkedin: "https://www.linkedin.com/in/philopater-rafat",
+      github: "https://github.com/philopater-rafat",
+      facebook:"https://www.facebook.com/share/1XHHGKFUGF/"
       },
 
   },
@@ -366,9 +366,9 @@ export const team = [
     role: "Member/Front-end",
     links: 
       {
-      linkedin: "https://www.linkedin.com/in/karim-hesham-a6105b227",
-      github: "https://github.com/KarimHesham23",
-      facebook:"https://www.facebook.com/share/19jPqXnXyi/"
+      linkedin: "https://www.linkedin.com/in/kerolos-nessim-970a4b2a5/",
+      github: "https://github.com/KerolosNessim",
+      facebook:"https://www.facebook.com/share/16rCokbdBX/"
       },
 
   },
@@ -379,9 +379,9 @@ export const team = [
     role: "Member/Front-end",
     links: 
       {
-      linkedin: "https://www.linkedin.com/in/karim-hesham-a6105b227",
-      github: "https://github.com/KarimHesham23",
-      facebook:"https://www.facebook.com/share/19jPqXnXyi/"
+      linkedin: "https://www.linkedin.com/in/mina-nessim-73a1722a5",
+      github: "https://github.com/MinaNesimEdwar",
+      facebook:"https://www.facebook.com/share/1FvH6xipbC/"
       },
 
   },
@@ -392,9 +392,9 @@ export const team = [
     role: "Member/RE & Malware Analysis",
     links: 
       {
-      linkedin: "https://www.linkedin.com/in/karim-hesham-a6105b227",
-      github: "https://github.com/KarimHesham23",
-      facebook:"https://www.facebook.com/share/19jPqXnXyi/"
+      linkedin: "https://www.linkedin.com/in/khaledkayed/",
+      github: "https://k4y31d.github.io/",
+      facebook:"https://www.facebook.com/KMIMEMK"
       },
 
   },

@@ -184,8 +184,8 @@ const SignUpPage = () => {
               <p className=" font-bold font-[family-name:var(--font-fira)]">or</p>
               <Separator />
             </div>
-            <a href="" className="flex items-center justify-center gap-2 rounded-md hover:bg-primary/90 transition-all duration-300 bg-primary  py-3 font-[family-name:var(--font-fira)]  font-semibold w-full"><FaGithub size={20} />  Sign Up With Github</a>
-            <a href="" className="flex items-center justify-center gap-2 rounded-md hover:bg-primary/90 transition-all duration-300 bg-primary  py-3 font-[family-name:var(--font-fira)]  font-semibold w-full"><FaGoogle size={20} />  Sign Up With Google</a>
+            <a href="https://anonymous-api.up.railway.app/auth/github" className="flex items-center justify-center gap-2 rounded-md hover:bg-primary/90 transition-all duration-300 bg-primary  py-3 font-[family-name:var(--font-fira)]  font-semibold w-full"><FaGithub size={20} />  Sign Up With Github</a>
+            <a href="https://anonymous-api.up.railway.app/auth/google" className="flex items-center justify-center gap-2 rounded-md hover:bg-primary/90 transition-all duration-300 bg-primary  py-3 font-[family-name:var(--font-fira)]  font-semibold w-full"><FaGoogle size={20} />  Sign Up With Google</a>
 
             <p className="text-center text-sm font-[family-name:var(--font-fira)]">Already have an account? <Link href="/login" className="text-primary font-semibold">Login</Link></p>
 

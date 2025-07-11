@@ -35,7 +35,7 @@ export default function ScrollToTop() {
       {isVisible && (
         <button
           onClick={scrollToTop}
-          className="fixed bottom-8 end-8 p-3 bg-primary text-white rounded-full shadow-lg hover:bg-primary/70 transition-all cursor-pointer"
+          className="fixed z-[99999] bottom-8 end-8 p-3 bg-primary text-white rounded-full shadow-lg hover:bg-primary/70 transition-all cursor-pointer"
         >
           <MdKeyboardDoubleArrowUp size={24}/>
         </button>

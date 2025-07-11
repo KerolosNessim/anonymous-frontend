@@ -37,6 +37,9 @@ export function CompressedFileForm({ setResponse }) {
   })
   const { formState: { isSubmitting } } = form;
   async function onSubmit(data) {
+    if (data.file.size > 1024 * 1024) {
+      toast.warning("Files larger than 1MB may result in reduce accuracy in family classification");
+    }
     const token = getToken();
     const formData = new FormData();
     formData.append('file', data.file);
@@ -109,7 +112,7 @@ export function CompressedFileForm({ setResponse }) {
         />
         </div>
         <Button type="submit" className={"px-8 w-full md:w-1/2 xl:w-1/4"}>{isSubmitting ? <RiLoader3Fill className="animate-spin" /> : "Upload File"}</Button>
-        <p className="text-center text-xs text-white">
+        <p className="text-center text-xs text-gray-400">
           By submitting data above, you are agreeing to our Terms of Service
           and Privacy Notice, and to the sharing of your Sample submission
           with the security community. Please do not submit any personal
