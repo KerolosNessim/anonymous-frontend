@@ -8,8 +8,7 @@ import Services from "@/components/home/services";
 import Welcome from "@/components/home/welcome";
 import CustomMarquee from "@/components/shared/custom-marquee";
 import { setToken } from "@/lib/cookies";
-import { useSearchParams } from "next/navigation";
-import { useRouter } from "next/router";
+import { useRouter, useSearchParams } from "next/navigation";
 import { useEffect } from "react";
 
 
