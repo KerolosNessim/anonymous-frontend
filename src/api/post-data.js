@@ -2,12 +2,17 @@ export const postData = async (endpoint, body = {}, headers = {}, options = {}) 
   try {
     const isFormData = body instanceof FormData;
 
-    const response = await fetch(`https://anonymous-api.up.railway.app${endpoint}`, {
-      method: 'POST',
-      headers: isFormData ? { ...headers } : { 'Content-Type': 'application/json', ...headers },
-      body: isFormData ? body : JSON.stringify(body),
-      ...options,
-    });
+    const response = await fetch(
+      `https://anonymous-apis.up.railway.app${endpoint}`,
+      {
+        method: "POST",
+        headers: isFormData
+          ? { ...headers }
+          : { "Content-Type": "application/json", ...headers },
+        body: isFormData ? body : JSON.stringify(body),
+        ...options,
+      }
+    );
 
     const contentType = response.headers.get('content-type');
 

@@ -1,8 +1,13 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-
   images: {
-    domains: ['anonymous-api.up.railway.app'],
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "anonymous-apis.up.railway.app",
+        pathname: "/**",
+      },
+    ],
   },
 };
 

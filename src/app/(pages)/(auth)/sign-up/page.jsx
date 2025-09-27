@@ -178,7 +178,7 @@ const SignUpPage = () => {
             ))}
 
 
-            <Button type="submit" className="px-16 h-12 font-[family-name:var(--font-fira)] font-semibold w-full">{isSubmitting ? <RiLoader3Fill className="animate-spin" /> : "Create Your Account"}</Button>
+            <Button disabled={isSubmitting} type="submit" className="px-16 h-12 font-[family-name:var(--font-fira)] font-semibold w-full">{isSubmitting ? <RiLoader3Fill className="animate-spin" /> : "Create Your Account"}</Button>
             <div className=" flex items-center justify-center gap-2 text-primary ">
               <Separator />
               <p className=" font-bold font-[family-name:var(--font-fira)]">or</p>

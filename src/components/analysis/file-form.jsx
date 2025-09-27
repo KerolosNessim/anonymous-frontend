@@ -107,7 +107,7 @@ export function FileForm({ setResponse }) {
             </FormItem>
           )}
         />
-        <Button type="submit" className={"px-8 w-full md:w-1/2 xl:w-1/4"}>{isSubmitting ? <RiLoader3Fill className="animate-spin" /> : "Upload File"}</Button>
+        <Button disabled={isSubmitting} type="submit" className={"px-8 w-full md:w-1/2 xl:w-1/4"}>{isSubmitting ? <RiLoader3Fill className="animate-spin" /> : "Upload File"}</Button>
         <p className="text-center text-xs text-gray-400">
           By submitting data above, you are agreeing to our Terms of Service
           and Privacy Notice, and to the sharing of your Sample submission

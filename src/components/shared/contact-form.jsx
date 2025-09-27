@@ -124,7 +124,7 @@ const ContactForm = () => {
           )}
         />
 
-        <Button type="submit" className="px-16 h-12 w-1/2 font-[family-name:var(--font-fira)] font-semibold">{isSubmitting ? <RiLoader3Fill className="animate-spin" /> : "send messages"}</Button>
+        <Button disabled={isSubmitting} type="submit" className="px-16 h-12 w-1/2 font-[family-name:var(--font-fira)] font-semibold">{isSubmitting ? <RiLoader3Fill className="animate-spin" /> : "send messages"}</Button>
       </form>
     </Form>
   )

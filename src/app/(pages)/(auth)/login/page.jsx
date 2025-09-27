@@ -108,7 +108,7 @@ const LoginPage = () => {
                 )}
               />
             ))}
-            <Button type="submit" className="px-16 h-12 font-[family-name:var(--font-fira)] font-semibold w-full">
+            <Button disabled={isSubmitting}  type="submit" className="px-16 h-12 font-[family-name:var(--font-fira)] font-semibold w-full">
               {isSubmitting ? <RiLoader3Fill className="animate-spin" /> : "Login"}
             </Button>
             <p className="text-center text-sm font-[family-name:var(--font-fira)]">Don't have an account <Link href="/sign-up" className="text-primary font-semibold">Sign Up</Link></p>
