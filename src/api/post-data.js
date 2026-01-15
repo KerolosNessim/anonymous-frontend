@@ -13,8 +13,6 @@ export const postData = async (endpoint, body = {}, headers = {}, options = {}) 
         ...options,
       }
     );
-
-    
     const contentType = response.headers.get('content-type');
 
     if (contentType && contentType.includes('application/json')) {
