@@ -3,7 +3,7 @@ export const postData = async (endpoint, body = {}, headers = {}, options = {}) 
     const isFormData = body instanceof FormData;
 
     const response = await fetch(
-      `https://anonymous-apis.up.railway.app${endpoint}`,
+      `https://api-production-2e45.up.railway.app${endpoint}`,
       {
         method: "POST",
         headers: isFormData

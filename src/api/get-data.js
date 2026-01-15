@@ -1,7 +1,7 @@
 export const getData = async (endpoint, headers = {}, options = {}) => {
   try {
     const response = await fetch(
-      `https://anonymous-apis.up.railway.app${endpoint}`,
+      `https://api-production-2e45.up.railway.app${endpoint}`,
       {
         method: "GET",
         headers: {
