@@ -7,6 +7,11 @@ const nextConfig = {
         hostname: "anonymous-apis.up.railway.app",
         pathname: "/**",
       },
+      {
+        protocol: "https",
+        hostname: "api-production-2e45.up.railway.app",
+        pathname: "/**",
+      },
     ],
   },
 };
