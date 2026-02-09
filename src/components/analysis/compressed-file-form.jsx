@@ -73,7 +73,7 @@ export function CompressedFileForm({ setResponse }) {
 
   return (
     <Form {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)} className="w-full py-12 space-y-6">
+      <form onSubmit= {form.handleSubmit(onSubmit)} className="w-full py-12 space-y-6">
         <Image
           src="/analysis/file.svg"
           alt="Virus"
