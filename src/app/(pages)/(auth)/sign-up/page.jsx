@@ -191,6 +191,7 @@ const SignUpPage = () => {
 
           </form>
         </Form>
+        
       </div>
     </section>
   )
