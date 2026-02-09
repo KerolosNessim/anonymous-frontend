@@ -11,7 +11,7 @@ export const getData = async (endpoint, headers = {}, options = {}) => {
         ...options,
       }
     );
-    const data = await response.json();
+    const data =  await response.json();
     return { ...data, status: response.status };
   } catch (error) {
     console.error('GET request error:', error);
