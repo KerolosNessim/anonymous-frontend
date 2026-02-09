@@ -12,6 +12,11 @@ const nextConfig = {
         hostname: "api-production-2e45.up.railway.app",
         pathname: "/**",
       },
+      {
+        protocol: "http",
+        hostname: "api-production-2e45.up.railway.app",
+        pathname: "/**",
+      },
     ],
   },
 };
